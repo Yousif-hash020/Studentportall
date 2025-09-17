@@ -83,46 +83,49 @@ function CourseDetail() {
 
 
 
-        {/* Assessments Table */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-[#F0FDFA] text-[#009689] text-[12px] font-light px-2">
-                <th className="py-3 px-4 font-semibold">ASSESSMENT TYPE</th>
-                <th className="py-3 px-4 font-semibold">OBTAINED MARKS</th>
-                <th className="py-3 px-4 font-semibold">TOTAL MARKS</th>
-                <th className="py-3 px-4 font-semibold">PERCENTAGE</th>
-              </tr>
-            </thead>
-            <tbody>
-              {course.assessments.map((a, index) => {
-                const percentage = ((a.obtained / a.total) * 100).toFixed(1);
-                return (
-                  <tr key={index} className="border-b border-gray-100 last:border-0">
-                    <td className="py-3 px-4">{a.type}</td>
-                    <td className="py-3 px-4 text-[#009689] font-medium">
-                      {a.obtained}
-                    </td>
-                    <td className="py-3 px-4">{a.total}</td>
-                    <td className="py-3 px-4 text-green-600 font-medium">
-                      {percentage}%
-                    </td>
-                  </tr>
-                );
-              })}
+      {/* Assessments Table */}
+<div className="bg-white rounded-xl shadow-md overflow-hidden">
+  <div className="overflow-x-auto">
+    <table className="w-full min-w-[600px] text-left border-collapse">
+      <thead>
+        <tr className="bg-[#F0FDFA] text-[#009689] text-[12px] font-light px-2">
+          <th className="py-3 px-4 font-semibold">ASSESSMENT TYPE</th>
+          <th className="py-3 px-4 font-semibold">OBTAINED MARKS</th>
+          <th className="py-3 px-4 font-semibold">TOTAL MARKS</th>
+          <th className="py-3 px-4 font-semibold">PERCENTAGE</th>
+        </tr>
+      </thead>
+      <tbody>
+        {course.assessments.map((a, index) => {
+          const percentage = ((a.obtained / a.total) * 100).toFixed(1);
+          return (
+            <tr key={index} className="border-b border-gray-100 last:border-0">
+              <td className="py-3 px-4">{a.type}</td>
+              <td className="py-3 px-4 text-[#009689] font-medium">
+                {a.obtained}
+              </td>
+              <td className="py-3 px-4">{a.total}</td>
+              <td className="py-3 px-4 text-green-600 font-medium">
+                {percentage}%
+              </td>
+            </tr>
+          );
+        })}
 
-              {/* Total Row */}
-              <tr className="bg-gray-50 font-bold">
-                <td className="py-3 px-4">Total</td>
-                <td className="py-3 px-4 text-teal-700">{course.totalScore}</td>
-                <td className="py-3 px-4">{course.totalMarks}</td>
-                <td className="py-3 px-4 text-green-600">
-                  {course.percentage}%
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        {/* Total Row */}
+        <tr className="bg-gray-50 font-bold">
+          <td className="py-3 px-4">Total</td>
+          <td className="py-3 px-4 text-teal-700">{course.totalScore}</td>
+          <td className="py-3 px-4">{course.totalMarks}</td>
+          <td className="py-3 px-4 text-green-600">
+            {course.percentage}%
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
       </div>
 
     </div>
