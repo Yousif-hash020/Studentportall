@@ -88,7 +88,7 @@ function Sidebar() {
         <div className="p-4 border-t">
           <p className="text-center text-xs text-gray-500">
             Developed By{" "}
-            <span className="text-emerald-600 font-medium">DevXcript</span>
+            <span className="text-emerald-600 font-medium">Muhammad Yousaf</span>
           </p>
         </div>
       </div>
