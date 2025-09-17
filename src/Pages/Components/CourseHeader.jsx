@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../Contxt/AppContext";
 import { BookOpenIcon, CalendarDaysIcon } from "@heroicons/react/24/outline";
 
 const CourseHeader = () => {

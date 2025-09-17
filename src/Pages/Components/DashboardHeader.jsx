@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../Contxt/AppContext";
 import { UserIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
 
 const DashboardHeader = () => {

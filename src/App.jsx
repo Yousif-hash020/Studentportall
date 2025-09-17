@@ -5,7 +5,7 @@ import Attendance from "./Pages/Attendance";
 import Courses from "./Pages/Courses";
 import CourseDetails from "./Pages/CourseDetail";
 import Result from "./Pages/Result";
-import { AppProvider } from "./context/AppContext";
+import { AppProvider } from "./Contxt/AppContext";
 import ProfileDetails from "./Pages/ProfileDetails";
 import Login from "./Pages/Login";
 
